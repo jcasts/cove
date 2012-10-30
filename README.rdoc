@@ -1,28 +1,20 @@
-= cove
+= Cove
 
-* FIX (url)
+* http://yaks.me/cove
 
-== DESCRIPTION:
+== Description
 
-FIX (describe your package)
+Short, sweet, aggregated code coverage.
 
-== FEATURES/PROBLEMS:
+== Requirements
 
-* FIX (list of features or problems)
+* Ruby-1.9.X or greater
 
-== SYNOPSIS:
+== Install
 
-  FIX (code sample of usage)
+* gem install cove
 
-== REQUIREMENTS:
-
-* FIX (list of requirements)
-
-== INSTALL:
-
-* FIX (sudo gem install, anything else)
-
-== DEVELOPERS:
+== Developers
 
 After checking out the source, run:
 
@@ -31,11 +23,11 @@ After checking out the source, run:
 This task will install any missing dependencies, run the tests/specs,
 and generate the RDoc.
 
-== LICENSE:
+== License
 
 (The MIT License)
 
-Copyright (c) 2012 FIX
+Copyright (c) 2012 Jeremie Castagna
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
