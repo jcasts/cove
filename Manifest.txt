@@ -5,4 +5,6 @@ README.txt
 Rakefile
 bin/cove
 lib/cove.rb
+lib/cove/ext.rb
+lib/cove/diff.rb
 test/test_cove.rb
