@@ -51,7 +51,9 @@ class Cove
         right = arr2[last_i2...c[2]]
 
         # add diffs
-        diff_ary << [left, right] unless left.empty? && right.empty?
+        unless left.empty? && right.empty?
+          diff_ary << [left, right]
+          yield(left, right) if block_given?
         end
 
         # add common
@@ -59,7 +61,9 @@ class Cove
           str2 = arr2[c[2]+i]
         end
 
-        diff_ary.concat arr1[c[1], c[0]]
+        com_ary = arr1[c[1], c[0]]
+        diff_ary.concat com_ary
+        yield(com_ary, com_ary) if block_given?
 
         last_i1 = c[1] + c[0]
         last_i2 = c[2] + c[0]

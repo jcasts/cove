@@ -1,4 +1,20 @@
 require 'coverage'
+require 'zlib'
+
+
+##
+# Cove is a simple Ruby code coverage tool that supports
+# reloading and incremental updates.
+#
+#   result = Cove.run "app/**/*.rb", "lib/**/*.rb" do
+#     # run code here
+#   end
+#
+#   new_result = Cove.run "app/**/*.rb" do
+#     # run more code here
+#   end
+#
+#   result.merge new_result
 
 class Cove
 
@@ -19,6 +35,14 @@ class Cove
 
 
   ##
+  # Aggregate a Coverage result hash with existing results.
+
+  def add_result name, res
+    
+  end
+
+
+  ##
   # Run the given block while measuring coverage.
   # Results will be aggregated to any previous results.
 
@@ -28,17 +52,9 @@ class Cove
         Coverage.start
         block.call
       ensure
-        add_result Coverage.result
+        add_result name, Coverage.result
       end
     end
-  end
-
-
-  ##
-  # Aggregate a Coverage result hash with existing results.
-
-  def add_result res
-    
   end
 
 
