@@ -23,6 +23,7 @@ class Cove
 
   require 'cove/ext'
   require 'cove/diff'
+  require 'cove/result'
 
 
   ##
