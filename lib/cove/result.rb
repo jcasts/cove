@@ -1,5 +1,8 @@
 class Cove::Result
 
+  ##
+  # Load a previously saved Cove::Result data file. See Cove::Result#write.
+
   def self.load_file cove_filepath
     Marshal.load(Zlib::Inflate.inflate(File.read(cove_filepath)))
   end
@@ -60,7 +63,7 @@ class Cove::Result
 
 
   ##
-  # Add a coverage array to the current on defined for `filepath'.
+  # Add a coverage array to the current one defined for `filepath'.
 
   def cov_add filepath, cov_ary
     @coverage[filepath] = add_cov_arrays(@coverage[filepath], cov_ary)

@@ -4,6 +4,8 @@ Manifest.txt
 README.txt
 Rakefile
 bin/cove
+ext/cove/cove.c
+ext/cove/extconf.rb
 lib/cove.rb
 lib/cove/ext.rb
 lib/cove/diff.rb

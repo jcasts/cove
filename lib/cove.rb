@@ -1,4 +1,7 @@
 require 'coverage'
+
+$: << File.expand_path(File.join(File.dirname(__FILE__), "..", "ext"))
+require 'cove/cove.o'
 require 'zlib'
 
 
@@ -24,6 +27,11 @@ class Cove
   require 'cove/ext'
   require 'cove/diff'
   require 'cove/result'
+
+
+  def self.add_trace filepath, line
+    puts "#{filepath}:#{line}"
+  end
 
 
   ##
